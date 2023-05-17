@@ -1,5 +1,6 @@
 import { redirect } from "react-router-dom";
 
+//  GET request for fetching node--destination data
 export async function getDestinations(query) {
   try {
     const rawDestinations = await fetch(
@@ -16,6 +17,7 @@ export async function getDestinations(query) {
   }
 }
 
+// POST request for posting new node--destination
 export async function createDestination(data) {
   const title = data.destination_title;
   const body = data.destination_body;
@@ -48,6 +50,7 @@ export async function createDestination(data) {
   if (res.status == 204) alert("new destination is made!");
 }
 
+// to get destination with given ID
 export async function getDestination(id) {
   let destinations = await getDestinations();
   //   console.log("from getDestination(): ", destinations);
@@ -58,6 +61,7 @@ export async function getDestination(id) {
   else return null;
 }
 
+// DELETE request for given node--destination ID
 export async function deleteDestination(id) {
   const deleteNode = await fetch(
     `http://localhost/travel_destinations/web/jsonapi/node/destination/${id}`,
@@ -76,6 +80,7 @@ export async function deleteDestination(id) {
   else return redirect(`/destinations/${id}`);
 }
 
+// POST request for given node--destination ID
 export async function updateDestination(id, updates) {
   const title = updates.destination_title;
   const body = updates.destination_body;

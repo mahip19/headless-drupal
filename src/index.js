@@ -28,21 +28,28 @@ const router = createBrowserRouter([
         index: true,
         element: <Index />,
       },
+
+      // ADDS NEW DESTINATION
       {
         path: "/add_destination",
         element: <AddDestinationForm />,
         action: formAction,
       },
+
+      // PAGE SHOWING DESTINATION INFO
       {
         path: "/destinations/:destinationID",
         element: <DestinationInfo />,
         loader: destinationInfoLoader,
       },
+
+      // DELETE DESTINATION
       {
         path: "/destinations/:destinationID/khaatma",
-
         action: deleteDestinationAction,
       },
+
+      // EDIT DESTINATION
       {
         path: "/destinations/:destinationID/edit",
         element: <EditDestination />,
