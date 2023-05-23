@@ -1,3 +1,17 @@
+# A Headless web application made using React.js, Router and Drupal JSON Api
+Used React to fetch and show nodes of Drupal. <br>
+Routing is implemented using react-router. <br>
+Content Management and API is provided by Drupal. <br>
+
+# Screenshots
+![image](https://github.com/mahip19/headless-drupal/blob/main/assests/index.png)
+
+![image](https://github.com/mahip19/headless-drupal/blob/main/assests/add_destination.png)
+
+![image](https://github.com/mahip19/headless-drupal/blob/main/assests/edit_destination.png)
+
+![image](https://github.com/mahip19/headless-drupal/blob/main/assests/new_destination.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
